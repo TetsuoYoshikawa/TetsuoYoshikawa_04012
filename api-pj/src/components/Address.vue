@@ -16,7 +16,7 @@ export default{
   },
   methods:{
     getAddress(){
-      const item = await aixos.get('https://apis.postcode-is.com/api/v3/postcodes?postcode=${this.address} eAAy5AF3PpWl4patSnxhGQFOoJg7JBFPVFrJBes);
+      const item = await aixos.get('https://apis.postcode-is.com/api/v3/postcodes\-G -v \-d "spiked= eAAy5AF3PpWl4patSnxhGQFOoJg7JBFPVFrJBes"\ -d "postcode=${this.address}");
       const addressData = item.data;
       this.showAddress = allAddress;
   }
