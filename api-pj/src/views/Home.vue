@@ -11,7 +11,7 @@ import axios from "axios";
 export default{
   data(){
     return{
-      address:nell,
+      address:"",
       showAddress:"",
       apikey:"eAAy5AF3PpWl4patSnxhGQFOoJg7JBFPVFrJBes",
     };
@@ -19,7 +19,7 @@ export default{
   methods:{
     getAddress(){
       let url ="https://apis.postcode-jp.com/api/v3/postcodes/" +　this.address + "?apiKey=" + this.apikey;
-      aixos.get(url).then((ras) => {
+      axios.get(url).then((ras) => {
          this.showAddress = ras.data.allAddress;
          });
 　　　　}
