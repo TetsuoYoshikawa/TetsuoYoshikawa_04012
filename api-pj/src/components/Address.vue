@@ -11,14 +11,18 @@ export default{
   data(){
     return{
       address:"",
-      showAddress:""
+      showAddress:"",
+      spiked:"eAAy5AF3PpWl4patSnxhGQFOoJg7JBFPVFrJBes",
     };
   },
   methods:{
     getAddress(){
-      const item = await aixos.get('https://apis.postcode-is.com/api/v3/postcodes\-G -v \-d "spiked= eAAy5AF3PpWl4patSnxhGQFOoJg7JBFPVFrJBes"\ -d "postcode=${this.address}");
-      const addressData = item.data;
-      this.showAddress = allAddress;
-  }
+      let url ="https://apis.postcode-jp.com/api/v3/postcodes/" +
+               this.address + "apiKey=" + this.apikey;
+      aixos.get(url).then((ras) => {
+         this.showAddress = ras.data.allAddress;
+         });
+　　　　}
+    }
 };
 </script>
